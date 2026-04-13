@@ -375,4 +375,93 @@ ol {
   bottom: -8px;
   left: 55px;
 }
+
+/* ============================================
+   SECTION — STEPS BANNER
+   ============================================ */
+.steps_wrapper {
+  position: relative;
+  padding-block: var(--gap-2xl);
+}
+/* ── wave shape ───── */
+.wave_shape svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.steps {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gap-xl);
+  padding-block: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.step {
+  position: relative;
+  display: flex;
+  align-items: left;
+  gap: var(--gap-lg);
+  padding: var(--gap-2xl) var(--gap-xl);
+  border-radius: var(--radius-lg);
+}
+.step_top_shape {
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+.step_bottom_shape {
+  position: absolute;
+  bottom: -8px;
+  left: 55px;
+}
+/* ── step backgrounds ───────────────────── */
+.step:nth-child(1) {
+  background-color: var(--color-cta);
+}
+.step:nth-child(2) {
+  background-color: var(--color-tertiary);
+}
+.step:nth-child(3) {
+  background-color: var(--color-secondary);
+}
+
+/* ── number color matches step bg ──────── */
+.step:nth-child(1) .step_num {
+  color: var(--color-cta);
+}
+.step:nth-child(2) .step_num {
+  color: var(--color-tertiary);
+}
+.step:nth-child(3) .step_num {
+  color: var(--color-secondary);
+}
+.step_icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.step_num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  color: var(--color-cta);
+}
+.step_title {
+  align-self: center;
+}
+.step_title h6 {
+  text-transform: uppercase;
+}
+
 /* END YOUR CSS HERE */
