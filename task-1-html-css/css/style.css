@@ -71,12 +71,13 @@ ol {
 
   /* Spacing */
   --container-width: 1240px;
-  --section-padding: 80px;
+  --section-padding: 40px;
   --gap-sm: 8px;
   --gap-md: 16px;
   --gap-lg: 24px;
   --gap-xl: 40px;
   --gap-2xl: 60px;
+  --gap-4xl: 100px;
 
   /* Border Radius */
   --radius-sm: 4px;
@@ -306,20 +307,30 @@ ol {
   width: 100%;
   max-width: var(--container-width);
   margin-inline: auto;
-  /* padding-inline: var(--gap-xl); */
+  /* padding: var(--gap-xl) ; */
 }
 
 /* ============================================
    SECTION 1 — HERO
    ============================================ */
 .hero {
-  padding-block: var(--section-padding) 60px;
+  position: relative;
+  padding-block: var(--section-padding);
+}
+.hero_shape {
+  position: absolute;
+  top: 38%;
+  left: -20%;
+  z-index: -1;
 }
 .hero_content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 525px);
   align-items: center;
-  gap: var(--gap-2xl);
+  gap: var(--gap-4xl);
+}
+.hero_info {
+  padding-block: var(--gap-2xl);
 }
 .hero_eyebrow {
   display: inline-block;
@@ -331,7 +342,7 @@ ol {
   color: var(--color-heading);
 }
 .hero_body {
-  margin: var(--gap-lg) 0 var(--gap-xl);
+  padding-block: var(--gap-lg) var(--gap-xl);
 }
 .btn_primary {
   display: inline-flex;
@@ -352,11 +363,16 @@ ol {
   display: inline-flex;
 }
 .hero_image {
-    position: relative;
+  position: relative;
 }
-.hero_img_shape {
-    position: absolute;
-    top: 0;
-    right: 60px;
+.hero_top_img_shape {
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+.hero_bottom_img_shape {
+  position: absolute;
+  bottom: -8px;
+  left: 55px;
 }
 /* END YOUR CSS HERE */
