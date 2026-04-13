@@ -252,8 +252,14 @@ ol {
   .h2-inner {
     font-size: 40px;
     line-height: 50px;
-    letter-spacing: 0;
   }
+  .h2-alt {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 70px;
+  letter-spacing: 0;
+}
 }
 
 /* Mobile (320px) */
@@ -291,8 +297,8 @@ ol {
     line-height: 18px;
   }
   .body-1 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 30px;
   }
   .body-2 {
     font-size: 14px;
@@ -302,6 +308,18 @@ ol {
     font-size: 16px;
     line-height: 24px;
   }
+  .h2-inner {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0;
+  }
+  .h2-alt {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0;
+}
 }
 
 /* ============================================
@@ -320,6 +338,10 @@ main {
   @media (max-width: 768px) {
     padding-inline: var(--gap-xl);
   }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    padding-inline: 20px;
+  }
 }
 
 /* ============================================
@@ -332,6 +354,10 @@ main {
   @media (max-width: 768px) {
     padding-block: var(--gap-2xl) var(--gap-xl);
   }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    padding-block: var(--gap-xl);
+  }
 }
 .hero_shape {
   position: absolute;
@@ -340,6 +366,11 @@ main {
   z-index: -11;
   /* Tablet (768px) */
   @media (max-width: 768px) {
+    top: 15%;
+    left: -20%;
+  }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
     top: 15%;
     left: -20%;
   }
@@ -390,6 +421,10 @@ main {
   @media (max-width: 768px) {
     padding-left: 18px;
   }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    padding-left: 16px;
+  }
   /* transition: var(--transition); */
 }
 .btn_arrow {
@@ -416,6 +451,10 @@ main {
   @media (max-width: 768px) {
     right: 145px;
   }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    right: 30px;
+  }
 }
 .hero_bottom_img_shape {
   position: absolute;
@@ -425,6 +464,11 @@ main {
   @media (max-width: 768px) {
     bottom: 0px;
     left: 135px;
+  }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    bottom: 0;
+    left: 20px;
   }
 }
 .hero_main-img {
@@ -458,6 +502,13 @@ main {
     padding-block: 10px;
     margin-block: var(--gap-xl);
   }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    padding-inline: var(--gap-md);
+    padding-block: 10px;
+    margin-block: var(--gap-md);
+  }
 }
 .step {
   position: relative;
@@ -481,6 +532,7 @@ main {
   right: 25px;
   /* Tablet (768px) */
   @media (max-width: 768px) {
+    top: -5px;
     right: 20px;
   }
 }
@@ -490,7 +542,7 @@ main {
   left: 55px;
   /* Tablet (768px) */
   @media (max-width: 768px) {
-    bottom: -6px;
+    bottom: -8px;
     left: 14px;
   }
 }
@@ -652,7 +704,13 @@ main {
   color: var(--color-white);
   /* Tablet (768px) */
   @media (max-width: 768px) {
+    text-align: center;
     paddin: var(--gap-lg) var(--gap-lg) 30px var(--gap-lg);
+  }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    text-align: center;
+    padding: var(--gap-md) var(--gap-md) 20px var(--gap-md);
   }
 }
 .practicer_btn-text {
@@ -760,14 +818,14 @@ main {
   @media (max-width: 768px) {
     
   }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    top: var(--gap-md);
+    left: var(--gap-md);
+    padding: var(--gap-md) 12px;
+  }
 }
-.doctor_badge_num {
-  font-family: var(--font-heading);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: var(--gap-sm);
-}
+
 .doctor_badge_label {
   max-width: 210px;
   width: 100%;
@@ -776,6 +834,17 @@ main {
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0.5px;
+  /* Tablet (768px) */
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* Mobile (320px) */
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
 }
 
 .doctor_info {
