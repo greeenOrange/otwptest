@@ -53,7 +53,7 @@ ol {
   /* Colors — inspect the Figma color palette to get exact hex values */
   /* TODO: Fill in the exact colors from the Figma file */
   --color-primary: #00bc4d; /* Main brand color (inspect from Figma) */
-  --color-secondary: #ec9f05; /* Secondary color (inspect from Figma) */
+  --color-secondary: #ffdc49; /* Secondary color (inspect from Figma) */
   --color-accent: #2cd080; /* Accent/highlight color (inspect from Figma) */
 
   --color-heading: #95440b;
@@ -302,7 +302,13 @@ ol {
    ============================================ */
 
 /* START YOUR CSS HERE */
-
+main {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh; */
+}
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -321,7 +327,7 @@ ol {
   position: absolute;
   top: 38%;
   left: -20%;
-  z-index: -1;
+  z-index: -11;
 }
 .hero_content {
   display: grid;
@@ -379,23 +385,7 @@ ol {
 /* ============================================
    SECTION — STEPS BANNER
    ============================================ */
-.steps_wrapper {
-  position: relative;
-  padding-block: var(--gap-2xl);
-}
-/* ── wave shape ───── */
-.wave_shape svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 .steps {
-  position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
@@ -464,4 +454,90 @@ ol {
   text-transform: uppercase;
 }
 
+/* ── step background shapes ──────────────── */
+.wave_shape {
+  position: relative;
+}
+.wave_shape svg{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -11;
+}
+
+.wave_bottom_shape {
+  position: relative;
+}
+.wave_bottom_shape svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  z-index: -11;
+}
+
+.practicer {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 190px;
+  margin-inline: auto;
+  padding-inline: var(--gap-xl);
+  padding-block: 40px;
+  background-color: var(--color-hero-subtitle);
+}
+.practicer_header{
+  padding-block: var(--gap-xl) var(--gap-2xl);
+  text-align: center;
+  background-color: var(--color-hero-subtitle);
+}
+.practice_eyebrow {
+  display: inline-block;
+  color: var(--color-white);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.practice_heading {
+  padding-top: var(--gap-sm);
+  color: var(--color-secondary);
+}
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: auto;
+}
+.swiper-slide:nth-child(4) img {
+  border-radius: 0 100px 0 0;
+}
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+.practicer_info {
+  padding-block: var(--gap-2xl) var(--gap-xl);
+  color: var(--color-white);
+}
+.practicer_btn {
+  background: var(--color-accent);
+}
+.practicer_btn-text {
+  color: var(--color-text);
+}
+.btn_arrow {
+  background: var(--color-white);
+  padding: 18px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+}
+.practicer_decs{
+  padding-block: var(--gap-2xl) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 610px);
+  align-items: center;
+  gap: var(--gap-2xl);
+}
 /* END YOUR CSS HERE */
