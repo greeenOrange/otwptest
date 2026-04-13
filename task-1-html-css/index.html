@@ -21,24 +21,6 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!--
-        TASK 1: Build the 3 sections from the Figma design below.
-        Look at the Figma file for the design.
-        Look at reference/FIGMA-LINK.md for how to access and inspect the design.
-
-        The 3 sections you need to build:
-        1. Hero Section ("Simple & Affordable")
-        2. Our Practice Section
-        3. Doctor Section
-
-        Requirements:
-        - Must be responsive: Desktop (1440px), Tablet (768px), Mobile (320px)
-        - Use the CSS variables defined in style.css
-        - Use placeholder images from https://placehold.co/ or export from Figma
-        - Implement button hover states (shown in Figma)
-        - No CSS frameworks allowed (no Bootstrap, no Tailwind)
-    -->
-
     <!-- START YOUR CODE HERE -->
     <main>
       <section class="hero">
@@ -119,6 +101,7 @@
       <section class="steps_list">
         <div class="steps" aria-label="How it works">
           <div class="step">
+            <img class="step-bg-img" src="images/practicer_step-img-1.png" alt="Step 1" />
             <div class="step_top_shape">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -173,6 +156,7 @@
             </div>
           </div>
           <div class="step">
+            <img class="step-bg-img" src="images/practicer_step-img-1.png" alt="Step 1" />
             <div class="step_top_shape">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -224,6 +208,7 @@
             </div>
           </div>
           <div class="step">
+            <img class="step-bg-img" src="images/practicer_step-img-1.png" alt="Step 1" />
             <div class="step_top_shape">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +259,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class=" btn_cta steps_btn">
+        <a href="#" class="btn_cta steps_btn">
           <span class="btn-text practicer_btn-text">Request An Exam</span>
           <span class="practicer_btn btn_arrow">
             <svg
@@ -427,9 +412,7 @@
         <div class="container">
           <div class="doctor_header">
             <p class="pre-header doctor_eyebrow">Compassion In Every Visit</p>
-            <h2 class="h2-inner doctor_heading">
-              Dedicated To Growing Smiles
-            </h2>
+            <h2 class="h2-inner doctor_heading">Dedicated To Growing Smiles</h2>
             <p class="body-2 doctor_intro">
               Our passion at Park Pediatric Dentistry is creating positive
               dental experiences that build trust, support healthy habits, and
