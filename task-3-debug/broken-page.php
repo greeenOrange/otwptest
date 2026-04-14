@@ -134,7 +134,7 @@ $testimonials = [
         <div class="services-grid">
             <?php foreach ($services as $service) { ?>
                 <div class="service-card">
-                    <div class="icon"><?php echo $service['icon']; ?></div>
+                    <div class="icon"><?php echo htmlspecialchars($service['icon']); ?></div>
                     <h3><?php echo htmlspecialchars($service['title']); ?></h3>
                     <p><?php echo htmlspecialchars($service['desc']); ?></p>
                 </div>
