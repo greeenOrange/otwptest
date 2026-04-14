@@ -508,16 +508,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 1280px) {
+  @media (min-width: 1280px) {
     position: absolute;
     z-index: 11;
   }
   /* Tablet (768px) */
-  @media (max-width: 768px) {
-    position: static;
-  }
-  /* Mobile (320px) */
-  @media (max-width: 480px) {
+  @media (max-width: 768px and min-width: 320px) {
     position: static;
   }
 }
