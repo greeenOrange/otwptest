@@ -826,17 +826,18 @@ main {
   color: var(--color-text);
 }
 .btn_secondary {
+  border: 2px solid transparent;
   background-color: var(--color-accent);
   color: var(--color-white);
   transition: var(--transition);
   /* Tablet (768px) */
   @media (max-width: 768px) {
-    background-color: var(--color-accent);
+    /* background-color: var(--color-accent); */
   }
 }
 .btn_secondary:hover {
   background-color: var(--color-white);
-  color: var(--color-white);
+  color: var(--color-accent);
   border: 2px solid var(--color-accent);
 }
 
@@ -848,6 +849,9 @@ main {
 .btn_secondary:hover .practicer_btn {
   background: var(--color-accent);
   color: var(--color-white);
+}
+.btn_secondary:hover .practicer_btn svg path {
+  fill: var(--color-white);
 }
 .practicer_decs {
   padding-block: var(--gap-2xl) 0;
@@ -1017,6 +1021,7 @@ main {
   background: var(--color-white);
   transition: var(--transition);
 }
+
 .btn_primary:hover .doctor_btn {
   background: var(--color-primary-btn);
   color: var(--color-white);
