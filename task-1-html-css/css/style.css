@@ -547,7 +547,7 @@ main {
   /* Mobile (320px) */
   @media (max-width: 480px) {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 2fr auto 2fr;
     gap: 12px;
     padding: 20px var(--gap-md);
   }
@@ -558,13 +558,13 @@ main {
   inset: 0;
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
   border-radius: inherit;
   opacity: 0;
   transform: translateX(-100%) scale(0.8);
   transition:
     opacity 0.7s ease,
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform 0.7s ease;
   z-index: 0;
 }
 
@@ -578,7 +578,7 @@ main {
   overflow: hidden;
   isolation: isolate;
   align-items: flex-start;
-  transition: transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
+  transition: var(--transition);
 }
 
 .step:hover {
@@ -588,7 +588,6 @@ main {
 /* Hide icon, svg and number on hover */
 .step:hover .step_icon {
   opacity: 0;
-  transform: translateX(110%);
 }
 .step_top_shape {
   position: absolute;
@@ -889,6 +888,7 @@ main {
 .doctor {
   position: relative;
   margin-top: 290px;
+  padding-block: 0 var(--gap-4xl);
   /* Tablet (768px) */
   @media (max-width: 768px) {
     margin-top: 230px;
@@ -1015,18 +1015,5 @@ main {
   @media (max-width: 480px) {
     margin-block: 0 var(--gap-lg);
   }
-}
-.doctor_btn {
-  margin: 2px;
-  background: var(--color-white);
-  transition: var(--transition);
-}
-
-.btn_primary:hover .doctor_btn {
-  background: var(--color-primary-btn);
-  color: var(--color-white);
-}
-.btn_primary:hover .doctor_btn svg path {
-  fill: var(--color-white);
 }
 /* END YOUR CSS HERE */
