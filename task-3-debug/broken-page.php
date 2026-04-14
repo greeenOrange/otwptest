@@ -41,7 +41,7 @@ $testimonials = [
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $practice_info['name']; ?></title>
+    <title><?php echo htmlspecialchars($practice_info['name']); ?></title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Lato', sans-serif; color: #333; }
@@ -163,7 +163,7 @@ $testimonials = [
     <!-- Footer -->
     <footer style="background: #333; color: white; padding: 40px 20px; text-align: center;">
         <p><?php echo htmlspecialchars($practice_info['name']); ?></p>
-        <p><?php echo htmlspecialchars($practice_info['address']); ?> | <?php echo $practice_info['phone']; ?></p>
+        <p><?php echo htmlspecialchars($practice_info['address']); ?> | <?php echo htmlspecialchars($practice_info['phone']); ?></p>
         <p>&copy; <?php echo date('Y'); ?> All rights reserved.</p>
     </footer>
 

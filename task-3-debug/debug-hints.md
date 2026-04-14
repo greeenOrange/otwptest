@@ -18,5 +18,6 @@ There are **5 bugs** in `broken-page.php`. They fall into these categories:
 - Write a clear commit message explaining what you found and how you fixed it
 
 Example commit messages:
-- `"fix: escape tagline output in hero section to prevent XSS"`
+- `"fix: 
++ to prevent XSS"`
 - `"fix: close missing curly brace in media query"`
