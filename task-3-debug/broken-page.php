@@ -124,7 +124,7 @@ $testimonials = [
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1><?php echo $practice_info['name']; ?></h1>
+        <h1><?php echo  $practice_info['name']; ?></h1>
         <p><?php echo $practice_info['tagline']; ?></p>
     </section>
 
