@@ -670,11 +670,11 @@ main {
 .step_title h6 {
   text-transform: uppercase;
 }
-.steps_btn{
-  display: none;
+.steps_btn {
+  visibility: hidden;
 }
-@media (max-width: 768px) and (max-width: 480px) {
-  .steps_btn {
+@media (min-width: 320px) and (max-width: 768px) {
+  /* .steps_btn {
     display: block;
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -684,6 +684,26 @@ main {
     background-color: var(--color-white);
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
+  } */
+  .steps_btn {
+    visibility: visible;
+    border: 2px solid transparent;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transition: var(--transition);
+  }
+  .steps_btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  .steps_btn:hover .practicer_btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+  .steps_btn:hover .practicer_btn svg path {
+    fill: var(--color-white);
   }
 }
 
@@ -710,63 +730,47 @@ main {
 }
 
 /* ── step background shapes ──────────────── */
-.wave_shape {
-  position: relative;
-}
-.wave_shape svg {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -11;
-  /* Tablet (768px) */
-  @media (max-width: 768px) {
-    max-width: 820px;
-    width: 100%;
-  }
-}
-
+ /* ── Top wave ── */
+    .wave_shape {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+      display: block;
+    }
+ 
+    .wave_shape svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+ 
+/* ── Bottom wave ── */
 .wave_bottom_shape {
   position: relative;
-}
-.wave_bottom_shape svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
   display: block;
-  z-index: -11;
-  /* Tablet (768px) */
-  @media (max-width: 768px) {
-  }
-  /* Mobile (320px) */
-  @media (max-width: 480px) {
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
+.wave_bottom_shape svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .practicer {
+  position: relative;
   width: 100%;
   max-width: 1440px;
-  margin-top: 190px;
-  margin-inline: auto;
-  padding-inline: var(--gap-xl);
-  padding-block: 40px;
   background-color: var(--color-hero-subtitle);
   /* Tablet (768px) */
   @media (max-width: 768px) {
-    margin-top: 140px;
-    padding-block: 0;
-    padding: 0;
   }
   /* Mobile (320px) */
   @media (max-width: 480px) {
-    margin-top: 62px;
-    padding-block: 0;
-    padding: 0;
   }
 }
 .practicer_header {
@@ -887,16 +891,13 @@ main {
    ============================================ */
 .doctor {
   position: relative;
-  margin-top: 290px;
   padding-block: 0 var(--gap-4xl);
   /* Tablet (768px) */
   @media (max-width: 768px) {
-    margin-top: 230px;
     padding-bottom: var(--gap-xl);
   }
   /* Mobile (320px) */
   @media (max-width: 480px) {
-    margin-top: 200px;
     padding-bottom: var(--gap-2xl);
   }
 }
@@ -917,7 +918,7 @@ main {
   max-width: 820px;
   width: 100%;
   margin-inline: auto;
-  padding-block: var(--gap-xl) var(--gap-2xl);
+  padding-block: 0 var(--gap-2xl);
   text-align: center;
   /* Tablet (768px) */
   @media (max-width: 768px) {
@@ -956,6 +957,10 @@ main {
   padding: 30px var(--gap-lg);
   /* Tablet (768px) */
   @media (max-width: 768px) {
+    max-width: 240px;
+    top: 0;
+    left: 0;
+    padding: var(--gap-lg) 20px;
   }
   /* Mobile (320px) */
   @media (max-width: 480px) {
